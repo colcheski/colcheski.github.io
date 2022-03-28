@@ -1,0 +1,111 @@
+.mainContent {
+  height: 1000px;
+}
+
+.minHeight1000 {
+  min-height: 1000px;
+}
+
+.minHeight800 {
+  min-height: 800px;
+}
+
+.meBackground {
+  background: linear-gradient(
+      135deg,
+      hsl(196, 76%, 31%, 0.35),
+      hsl(175, 52%, 31%, 0.55)
+    ),
+    url("../images/Me.jpg") no-repeat 40% 20% / cover;
+  object-position: -20% 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100vh;
+}
+
+.makeMeSticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  /* top: 80vh;
+    margin-top: 80vh; */
+  background-color: black;
+  padding: 50px;
+  font-size: 20px;
+}
+
+.stickyTest {
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: 0;
+  background-color: black;
+  padding: 50px;
+  font-size: 20px;
+}
+
+.makeMeAbsolute {
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+}
+
+.about {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  padding: 50px;
+  font-size: 20px;
+
+  background: linear-gradient(
+      135deg,
+      hsl(196, 76%, 31%, 0.35),
+      hsl(175, 52%, 31%, 0.55)
+    ),
+    url("../images/Me.jpg") no-repeat 40% 20% / cover;
+  object-position: -20% 0;
+  background-repeat: no-repeat;
+  /* Remove the height attribute for original functionality */
+  height: 100vh;
+}
+
+.testimonials {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  padding: 50px;
+  font-size: 20px;
+
+  background: linear-gradient(
+      135deg,
+      hsl(196, 76%, 31%, 0.35),
+      hsl(175, 52%, 31%, 0.55)
+    ),
+    url("../images/CourtneyMeOliveGrace.jpg") no-repeat 40% 20% / cover;
+  object-position: -20% 0;
+  background-repeat: no-repeat;
+  /* Remove the height attribute for original functionality */
+  height: 100vh;
+}
+
+.contact {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  padding: 50px;
+  font-size: 20px;
+
+  background: linear-gradient(
+      135deg,
+      hsl(196, 76%, 31%, 0.35),
+      hsl(175, 52%, 31%, 0.55)
+    ),
+    url("../images/ContactImage.jpg") no-repeat 40% 20% / cover;
+  object-position: -20% 0;
+  background-repeat: no-repeat;
+  /* Remove the height attribute for original functionality */
+  height: 100vh;
+}
+
+.contentSection {
+  min-height: 2000px;
+}
