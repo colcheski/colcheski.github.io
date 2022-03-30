@@ -10,6 +10,16 @@
   min-height: 800px;
 }
 
+.parallaxIntro {
+  /* background: url("https://images.unsplash.com/photo-1535919020263-f79f5313f336?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80")
+    no-repeat fixed; */
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .meBackground {
   background: linear-gradient(
       135deg,
@@ -23,30 +33,20 @@
   height: 100vh;
 }
 
-.makeMeSticky {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-  /* top: 80vh;
-    margin-top: 80vh; */
-  background-color: black;
-  padding: 50px;
-  font-size: 20px;
-}
-
-.stickyTest {
-  position: -webkit-sticky;
-  position: sticky;
-  bottom: 0;
-  background-color: black;
-  padding: 50px;
-  font-size: 20px;
-}
-
 .makeMeAbsolute {
   position: absolute;
   bottom: 0;
   text-align: center;
+}
+
+.aboutParallax {
+  height: 100vh;
+  background: linear-gradient(
+      135deg,
+      hsl(196, 76%, 31%, 0.35),
+      hsl(175, 52%, 31%, 0.55)
+    ),
+    url("../images/Me.jpg") no-repeat 40% 20% / cover;
 }
 
 .about {
@@ -55,7 +55,6 @@
   top: 0;
   padding: 50px;
   font-size: 20px;
-
   background: linear-gradient(
       135deg,
       hsl(196, 76%, 31%, 0.35),
@@ -64,6 +63,25 @@
     url("../images/Me.jpg") no-repeat 40% 20% / cover;
   object-position: -20% 0;
   background-repeat: no-repeat;
+
+  /* Remove the height attribute for original functionality */
+  height: 100vh;
+}
+
+.aboutTest {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  padding: 50px;
+  font-size: 20px;
+  background: linear-gradient(
+      135deg,
+      hsl(196, 76%, 31%, 0.35),
+      hsl(175, 52%, 31%, 0.55)
+    ),
+    url("../images/Me.jpg") no-repeat fixed -600px -200px / cover;
+  background-repeat: no-repeat;
+
   /* Remove the height attribute for original functionality */
   height: 100vh;
 }
