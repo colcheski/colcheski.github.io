@@ -2,6 +2,33 @@ body {
   overscroll-behavior: none;
 }
 
+body {
+  overflow: auto;
+}
+
+.navigationLinks {
+  padding: 0;
+}
+
+.navigationLinks li {
+  display: inline;
+  cursor: default;
+}
+
+.navigationLinks li:not(:first-of-type)::before {
+  content: "/";
+}
+
+.navigationLinks li a {
+  color: white;
+  text-decoration: none;
+}
+
+.navigationLinks li a:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.5em;
+}
+
 .mainContent {
   height: 1000px;
 }
@@ -68,7 +95,7 @@ body {
   position: absolute;
   bottom: 0;
   text-align: center;
-  font-size: 20px;
+  font-size: 25px;
   color: white;
 }
 
@@ -99,18 +126,25 @@ body {
   position: sticky;
   top: 0;
   padding: 50px;
-  font-size: 20px;
-
-  background: linear-gradient(
+  font-size: 50px;
+  font-family: Playfair Display;
+  color: white;
+  /* background: linear-gradient(
       135deg,
       hsl(196, 76%, 31%, 0.35),
       hsl(175, 52%, 31%, 0.55)
     ),
-    url("../images/ContactImage.jpg") no-repeat 40% 20% / cover;
-  object-position: -20% 0;
-  background-repeat: no-repeat;
+    url("../images/ContactImage.jpg") no-repeat 40% 20% / cover; */
+  background-color: #f7484e;
+  background-color: #d9d1cf;
   /* Remove the height attribute for original functionality */
   height: 100vh;
+}
+
+.testBackground {
+  background: url("../images/CourtneyMeOliveGrace.jpg") no-repeat 40% 20% /
+    cover;
+  height: 1000px;
 }
 
 .contentSection {
