@@ -1,3 +1,7 @@
+body {
+  overscroll-behavior: none;
+}
+
 .mainContent {
   height: 1000px;
 }
