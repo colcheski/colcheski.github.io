@@ -10,21 +10,29 @@ body {
   padding: 0;
 }
 
-.navigationLinks li {
+.navigationLinks-1 li,
+.navigationLinks-2 li {
   display: inline;
   cursor: default;
 }
 
-.navigationLinks li:not(:first-of-type)::before {
+.navigationLinks-1 li:not(:first-of-type)::before,
+.navigationLinks-2 li:not(:first-of-type)::before {
   content: "/";
 }
 
-.navigationLinks li a {
+.navigationLinks-1 li a {
   color: white;
   text-decoration: none;
 }
 
-.navigationLinks li a:hover {
+.navigationLinks-2 li a {
+  color: black;
+  text-decoration: none;
+}
+
+.navigationLinks-1 li a:hover,
+.navigationLinks-2 li a:hover {
   text-decoration: underline;
   text-underline-offset: 0.5em;
 }
@@ -68,47 +76,58 @@ body {
   font-family: Helvetica, sans-serif;
   font-weight: 400;
   font-style: normal;
+  background-color: #fcf6f5ff;
 }
 
 .about {
   display: flex;
-  justify-content: center;
   align-items: center;
-  position: -webkit-sticky;
-  position: sticky;
+  justify-content: center;
+  flex-flow: column;
   padding: 50px;
-  top: 0;
   color: white;
-  background-color: #f7484e;
+  background-color: #292929;
   height: 100vh;
 }
 
 .sectionName {
   display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
   font-family: Playfair Display;
   font-size: 50px;
   text-align: center;
 }
 
-.navigationPane {
+.navigationPane-1 {
   font-family: Playfair Display;
-  position: absolute;
-  bottom: 0;
+  display: flex;
+  margin-top: auto;
   text-align: center;
   font-size: 25px;
   color: white;
 }
 
+.navigationPane-2 {
+  font-family: Playfair Display;
+  display: flex;
+  margin-top: auto;
+  text-align: center;
+  font-size: 25px;
+  color: black;
+}
+
 .testimonials {
   display: flex;
-  justify-content: center;
   align-items: center;
-  position: -webkit-sticky;
-  position: sticky;
+  justify-content: center;
+  flex-flow: column;
   padding: 50px;
   top: 0;
   color: white;
-  background-color: #292929;
+  /* background-color: #f7484e; */
+  background-color: #990011ff;
   height: 100vh;
 
   /* background: linear-gradient(
@@ -121,7 +140,7 @@ body {
   height: 100vh;
 }
 
-.contact {
+/*.contact {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
@@ -129,14 +148,29 @@ body {
   font-size: 50px;
   font-family: Playfair Display;
   color: white;
+  background-color: #f7484e;
+  background-color: #d9d1cf;
+  height: 100vh;
+}*/
+
+.contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+  padding: 50px;
+  top: 0;
+  color: black;
+  /* background-color: #f7484e; */
+  background-color: #d9d1cf;
+  height: 100vh;
+
   /* background: linear-gradient(
       135deg,
       hsl(196, 76%, 31%, 0.35),
       hsl(175, 52%, 31%, 0.55)
     ),
-    url("../images/ContactImage.jpg") no-repeat 40% 20% / cover; */
-  background-color: #f7484e;
-  background-color: #d9d1cf;
+    url("../images/CourtneyMeOliveGrace.jpg") no-repeat 40% 20% / cover; */
   /* Remove the height attribute for original functionality */
   height: 100vh;
 }
