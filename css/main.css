@@ -26,15 +26,23 @@ body {
   text-decoration: none;
 }
 
-.navigationLinks-2 li a {
+.navigationLinks-2 li a,
+.mobileNavigationLinks li a {
   color: black;
   text-decoration: none;
 }
 
 .navigationLinks-1 li a:hover,
-.navigationLinks-2 li a:hover {
+.navigationLinks-2 li a:hover,
+.mobileNavigationLinks li a:hover {
   text-decoration: underline;
-  text-underline-offset: 0.5em;
+  text-underline-offset: 0.3em;
+}
+
+.mobileNavigationLinks {
+  list-style-type: none;
+  display: table;
+  margin: 0 auto;
 }
 
 .mainContent {
@@ -202,7 +210,7 @@ body {
   border-radius: 50%;
   position: fixed;
   top: 5vh;
-  right: 5vw;
+  left: 5vw;
   z-index: 2000;
   box-shadow: 0 1rem 3rem black;
   text-align: center;

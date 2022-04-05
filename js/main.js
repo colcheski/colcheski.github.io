@@ -4,6 +4,17 @@ $(document).ready(function () {
   let parallaxIntroBottom =
     parallaxIntro.position().top + parallaxIntro.outerHeight(true);
 
+  var scrollTop = $(window).scrollTop();
+  if (window.innerWidth < 992) {
+    if (scrollTop < parallaxIntroBottom) {
+      $(".hamburgerButton").fadeOut();
+    } else {
+      $(".hamburgerButton").fadeIn();
+    }
+  } else {
+    $(".hamburgerButton").fadeOut();
+  }
+
   $(window).on("hashchange", function (e) {
     window.history.pushState("", document.title, window.location.pathname);
   });
@@ -12,6 +23,17 @@ $(document).ready(function () {
     parallaxIntro = $("#parallaxIntro");
     parallaxIntroBottom =
       parallaxIntro.position().top + parallaxIntro.outerHeight(true);
+
+    var scrollTop = $(window).scrollTop();
+    if (window.innerWidth < 992) {
+      if (scrollTop < parallaxIntroBottom) {
+        $(".hamburgerButton").fadeOut();
+      } else {
+        $(".hamburgerButton").fadeIn();
+      }
+    } else {
+      $(".hamburgerButton").fadeOut();
+    }
   });
 
   console.log($(window).innerWidth);
