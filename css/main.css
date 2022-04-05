@@ -118,6 +118,15 @@ body {
   color: black;
 }
 
+.mobileNavigation {
+  font-family: Playfair Display;
+  display: flex;
+  margin-top: auto;
+  text-align: center;
+  font-size: 25px;
+  color: black;
+}
+
 .testimonials {
   display: flex;
   align-items: center;
@@ -185,17 +194,6 @@ body {
   min-height: 2000px;
 }
 
-@media screen and (min-width: 0px) and (max-width: 991px) {
-  .hamburgerButton {
-    display: block;
-  }
-}
-@media screen and (min-width: 992px) {
-  .hamburgerButton {
-    display: none;
-  }
-}
-
 .hamburgerButton {
   position: relative;
   background-color: white;
@@ -261,4 +259,19 @@ body {
 
 .modalTitle {
   align-items: center;
+}
+
+@media screen and (min-width: 0px) and (max-width: 991px) {
+  .hamburgerButton {
+    display: block;
+  }
+  .navigationPane-1,
+  .navigationPane-2 {
+    display: none;
+  }
+}
+@media screen and (min-width: 992px) {
+  .hamburgerButton {
+    display: none;
+  }
 }

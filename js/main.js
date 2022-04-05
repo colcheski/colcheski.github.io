@@ -1,6 +1,31 @@
 $(document).ready(function () {
+  /* Variables for Mobile Scroll (probably want to think about not using globals) */
+  let parallaxIntro = $("#parallaxIntro");
+  let parallaxIntroBottom =
+    parallaxIntro.position().top + parallaxIntro.outerHeight(true);
+
   $(window).on("hashchange", function (e) {
     window.history.pushState("", document.title, window.location.pathname);
+  });
+
+  $(window).on("resize", function () {
+    parallaxIntro = $("#parallaxIntro");
+    parallaxIntroBottom =
+      parallaxIntro.position().top + parallaxIntro.outerHeight(true);
+  });
+
+  /* Probably want to make this more efficient */
+  $(window).on("scroll", () => {
+    var scrollTop = $(window).scrollTop();
+    if ($(window).width() <= 992) {
+      if (scrollTop < parallaxIntroBottom) {
+        $(".hamburgerButton").fadeOut();
+      } else {
+        $(".hamburgerButton").fadeIn();
+      }
+    } else {
+      $(".hamburgerButton").fadeOut();
+    }
   });
 
   $("#myModal").on("hidden.bs.modal", function () {
@@ -15,7 +40,6 @@ $(document).ready(function () {
     .off()
     .on("click", function () {
       const href = $(this).attr("href");
-      console.log(href);
       $("html,body").animate(
         {
           scrollTop: $(href).offset().top,
