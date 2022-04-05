@@ -14,10 +14,12 @@ $(document).ready(function () {
       parallaxIntro.position().top + parallaxIntro.outerHeight(true);
   });
 
+  console.log($(window).innerWidth);
+
   /* Probably want to make this more efficient */
   $(window).on("scroll", () => {
     var scrollTop = $(window).scrollTop();
-    if ($(window).width() <= 992) {
+    if (window.innerWidth < 992) {
       if (scrollTop < parallaxIntroBottom) {
         $(".hamburgerButton").fadeOut();
       } else {
