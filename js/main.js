@@ -36,8 +36,6 @@ $(document).ready(function () {
     }
   });
 
-  console.log($(window).innerWidth);
-
   /* Probably want to make this more efficient */
   $(window).on("scroll", () => {
     var scrollTop = $(window).scrollTop();
