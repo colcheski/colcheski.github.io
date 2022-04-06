@@ -58,13 +58,52 @@ body {
 }
 
 .parallaxIntro {
-  background: url("https://images.unsplash.com/photo-1535919020263-f79f5313f336?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80")
-    no-repeat fixed;
-  background-size: cover;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position: relative;
+  /* background: url("https://images.unsplash.com/photo-1535919020263-f79f5313f336?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80")
+    no-repeat fixed; */
+  background: url("../images/Me.jpg") no-repeat fixed 40% 20% / cover;
+  /* background-size: cover; */
+  min-height: 80vh;
+  /* justify-content: center;
+  align-items: center; */
+}
+
+.hiAnimation {
+  position: absolute;
+  animation-name: hi;
+  animation-duration: 1s;
+  margin-top: 4em;
+  margin-left: 4em;
+}
+
+@keyframes hi {
+  from {
+    margin-top: 0%;
+    margin-left: 0%;
+  }
+  to {
+    margin-top: 4em;
+    margin-left: 4em;
+  }
+}
+
+.imChrisAnimation {
+  position: absolute;
+  animation-name: imchris;
+  animation-duration: 1s;
+  bottom: 4em;
+  right: 4em;
+}
+
+@keyframes imchris {
+  from {
+    bottom: 0;
+    right: 0;
+  }
+  to {
+    bottom: 4em;
+    right: 4em;
+  }
 }
 
 .meBackground {
