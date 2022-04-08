@@ -6,6 +6,11 @@ body {
   overflow: auto;
 }
 
+p {
+  margin-top: 1em;
+  padding: 0.5em;
+}
+
 .navigationLinks {
   padding: 0;
 }
@@ -63,7 +68,7 @@ body {
     no-repeat fixed; */
   background: url("../images/Me.jpg") no-repeat fixed 40% 20% / cover;
   /* background-size: cover; */
-  min-height: 80vh;
+  min-height: 85vh;
   /* justify-content: center;
   align-items: center; */
 }
@@ -72,8 +77,10 @@ body {
   position: absolute;
   animation-name: hi;
   animation-duration: 1s;
-  margin-top: 4em;
-  margin-left: 4em;
+  /* margin-top: 4em;
+  margin-left: 4em; */
+  margin-top: 15%;
+  margin-left: 25%;
 }
 
 @keyframes hi {
@@ -82,8 +89,8 @@ body {
     margin-left: 0%;
   }
   to {
-    margin-top: 4em;
-    margin-left: 4em;
+    margin-top: 15%;
+    margin-left: 25%;
   }
 }
 
@@ -91,18 +98,20 @@ body {
   position: absolute;
   animation-name: imchris;
   animation-duration: 1s;
-  bottom: 4em;
-  right: 4em;
+  /* bottom: 4em;
+  right: 4em; */
+  bottom: 50%;
+  right: 10%;
 }
 
 @keyframes imchris {
   from {
-    bottom: 0;
-    right: 0;
+    bottom: 0%;
+    right: 0%;
   }
   to {
-    bottom: 4em;
-    right: 4em;
+    bottom: 50%;
+    right: 10%;
   }
 }
 
@@ -128,6 +137,7 @@ body {
 }
 
 .sectionContentTitle {
+  padding: 1.5em;
   text-align: center;
   width: 100%;
 }
@@ -151,6 +161,7 @@ body {
   color: white;
   background-color: #292929;
   min-height: 100vh;
+  max-height: 100vh;
 }
 
 .sectionName {
@@ -199,6 +210,7 @@ body {
   color: white;
   background-color: #990011ff;
   min-height: 100vh;
+  max-height: 100vh;
 }
 
 /*.contact {
@@ -223,6 +235,7 @@ body {
   color: black;
   background-color: #d9d1cf;
   min-height: 100vh;
+  max-height: 100vh;
 }
 
 .testBackground {
@@ -315,4 +328,14 @@ body {
   .hamburgerButton {
     display: none;
   }
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.imgWrapper {
+  max-height: 100vh;
+  overflow: hidden;
 }
