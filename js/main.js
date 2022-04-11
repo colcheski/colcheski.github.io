@@ -69,4 +69,29 @@ $(document).ready(function () {
         100
       );
     });
+
+  const createFadeupObserver = () => {
+    const observerOptions = {
+      root: null,
+      threshold: 0,
+      rootMargin: "0px 0px -50px 0px",
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("in-view");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    const sections = Array.from(document.getElementsByClassName("fadeUp"));
+
+    for (let section of sections) {
+      observer.observe(section);
+    }
+  };
+
+  createFadeupObserver();
 });

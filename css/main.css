@@ -7,8 +7,13 @@ body {
 }
 
 p {
-  /* padding: 1em; */
+  padding-top: 1rem !important;
+  padding-bottom: 1rem !important;
   margin-bottom: 0;
+}
+
+.noWrap {
+  white-space: nowrap;
 }
 
 .navigationLinks {
@@ -340,4 +345,18 @@ img {
 .imgWrapper {
   max-height: 100vh;
   overflow: hidden;
+  border-radius: 25%;
+}
+
+.fadeUp {
+  transform: translateY(10px);
+  opacity: 0;
+  transition-property: transform, opacity;
+  transition-duration: 0.5s;
+  transition-timing-function: linear;
+}
+
+.in-view {
+  transform: none;
+  opacity: 1;
 }
