@@ -6,10 +6,10 @@ body {
   overflow: auto;
 }
 
-p {
+/* p {
   padding: 1em;
   margin-bottom: 0;
-}
+} */
 
 .navigationLinks {
   padding: 0;
@@ -137,7 +137,7 @@ p {
 }
 
 .sectionContentTitle {
-  padding: 1.5em;
+  padding-top: 1.5em;
   text-align: center;
   width: 100%;
 }
