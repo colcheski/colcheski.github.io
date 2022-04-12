@@ -360,3 +360,35 @@ img {
   transform: none;
   opacity: 1;
 }
+
+#contactSection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+  height: 90%; /* Some other styling is pushing this down at 100, 90 seems to position it where I expect */
+}
+
+#linkedIn {
+  height: 80px;
+  width: 94px;
+}
+
+#email,
+#resume {
+  height: 90px;
+  width: 90px;
+}
+
+/* Clear floats after image containers */
+.imageRow::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.imageColumn {
+  float: left;
+  width: 50%;
+  padding: 5px;
+}

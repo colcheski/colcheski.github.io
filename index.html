@@ -34,7 +34,7 @@
 
     </div>
     <div class="container-fluid mainContent">
-        <div class="row minHeight1000" id="about">
+        <div class="row" id="about">
             <div class="about sticky-lg-top col-lg-4">
                 <div class="sectionName">About</div>
                 <div class="navigationPane-1">
@@ -54,7 +54,6 @@
                 </div>
             </div>
             <div class="col-lg-8 contentFont">
-                <a href="./files/Christopher_James_Olcheski_Resume_2022.pdf" download target="_blank">Test Link</a>
                 <div class="sectionContentTitle">
                     <h5>I am a Software Developer from Northeastern Pennsylvania.</h5>
                 </div>
@@ -138,7 +137,7 @@
                 </div>
             </div>
         </div>
-        <div class="row minHeight1000" id="testimonials">
+        <div class="row" id="testimonials">
             <div class="testimonials sticky-lg-top col-lg-4">
                 <div class="sectionName">Testimonials</div>
                 <div class="navigationPane-1">
@@ -173,7 +172,7 @@
                 </div>
             </div>
         </div>
-        <div class="row minHeight1000" id="contact">
+        <div class="row" id="contact">
             <div class="contact sticky-lg-top col-lg-4">
                 <div class="sectionName">Contact</div>
                 <div class="navigationPane-2">
@@ -193,51 +192,75 @@
                 </div>
             </div>
             <div class="col-lg-8 contentFont">
-                <p>If you would like to consider me for a position on your team, please feel free to contact me!</p>
-                <p><b>Email</b></p>
-                <p><b>LinkedIn</b></p>
+                <div class="sectionContentTitle">
+                    <h5>If you would like to consider me for a position on your team, please feel free to contact me!
+                    </h5>
+                </div>
+                <div id="contactSection">
+                    <div class="imageRow">
+                        <div class="imageColumn">
+                            <img id="email" alt="Chris Olcheski Email" title="Chris Olcheski Email"
+                                src="./images/email.png">
+                        </div>
+                        <div class="imageColumn">
+                            <a href="https://www.linkedin.com/in/colcheski/" target="_blank">
+                                <img id="linkedIn" alt="Chris Olcheski LinkedIn" title="Chris Olcheski LinkedIn"
+                                    src="./images/LI-In-Bug.png">
+                            </a>
+                        </div>
+                    </div>
+                    <b>
+                        <p>If you would like my resume, please download it here: </p>
+                    </b>
+                    <a href="./files/Christopher_James_Olcheski_Resume_2022.pdf" download target="_blank"><img
+                            id="resume" alt="Chris Olcheski Resume" title="Chris Olcheski Resume"
+                            src="./images/download_resume.png"></a>
+
+
+                </div>
             </div>
         </div>
-        <!-- hamburger -->
-        <input type="checkbox" id="navi-toggle" class="hamburgerCheckbox" data-bs-toggle="modal"
-            data-bs-target="#myModal" />
-        <label for="navi-toggle" class="hamburgerButton" style="display:none;">
-            <span class="hamburgerIcon">&nbsp;</span>
-        </label>
+    </div>
+    <!-- hamburger -->
+    <input type="checkbox" id="navi-toggle" class="hamburgerCheckbox" data-bs-toggle="modal"
+        data-bs-target="#myModal" />
+    <label for="navi-toggle" class="hamburgerButton" style="display:none;">
+        <span class="hamburgerIcon">&nbsp;</span>
+    </label>
 
 
 
-        <div id="myModal" class="modal fade" role="dialog">
-            <div class="modal-dialog">
+    <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
 
-                <!-- Modal content-->
-                <div class="modal-content">
-                    <div class="modal-header text-center">
-                        <h4 class="modal-title w-100">Navigation</h4>
-                    </div>
-                    <div class="modal-body">
-                        <div id="mobileNavigationBody">
-                            <nav>
-                                <ul class="mobileNavigationLinks">
-                                    <li>
-                                        <a href="#about" class="mobileNavigation" data-bs-dismiss="modal"
-                                            data-bs-target="#myModal">About</a>
-                                    </li>
-                                    <li>
-                                        <a href="#testimonials" class="mobileNavigation" data-bs-dismiss="modal"
-                                            data-bs-target="#myModal">Testimonials</a>
-                                    </li>
-                                    <li>
-                                        <a href="#contact" class="mobileNavigation" data-bs-dismiss="modal"
-                                            data-bs-target="#myModal" data-scroll-id="#testimonials">Contact</a>
-                                    </li>
-                                </ul>
-                            </nav>
-                        </div>
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header text-center">
+                    <h4 class="modal-title w-100">Navigation</h4>
+                </div>
+                <div class="modal-body">
+                    <div id="mobileNavigationBody">
+                        <nav>
+                            <ul class="mobileNavigationLinks">
+                                <li>
+                                    <a href="#about" class="mobileNavigation" data-bs-dismiss="modal"
+                                        data-bs-target="#myModal">About</a>
+                                </li>
+                                <li>
+                                    <a href="#testimonials" class="mobileNavigation" data-bs-dismiss="modal"
+                                        data-bs-target="#myModal">Testimonials</a>
+                                </li>
+                                <li>
+                                    <a href="#contact" class="mobileNavigation" data-bs-dismiss="modal"
+                                        data-bs-target="#myModal" data-scroll-id="#testimonials">Contact</a>
+                                </li>
+                            </ul>
+                        </nav>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
     </div>
 
 
