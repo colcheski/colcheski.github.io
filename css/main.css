@@ -1,10 +1,10 @@
-body {
+/* body {
   overscroll-behavior: none;
 }
 
 body {
   overflow: auto;
-}
+} */
 
 p {
   padding-top: 1rem !important;
@@ -362,11 +362,12 @@ img {
 }
 
 #contactSection {
+  margin-top: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-flow: column;
-  height: 90%; /* Some other styling is pushing this down at 100, 90 seems to position it where I expect */
+  /*height: 90%;  Some other styling is pushing this down at 100, 90 seems to position it where I expect */
 }
 
 #linkedIn {
