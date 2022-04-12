@@ -143,6 +143,10 @@ p {
   padding: 2rem;
 }
 
+.contentSection {
+  min-height: 100vh;
+}
+
 .sectionContentTitle {
   padding-top: 1rem;
   text-align: center;
@@ -220,19 +224,6 @@ p {
   max-height: 100vh;
 }
 
-/*.contact {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-  padding: 50px;
-  font-size: 50px;
-  font-family: Playfair Display;
-  color: white;
-  background-color: #f7484e;
-  background-color: #d9d1cf;
-  height: 100vh;
-}*/
-
 .contact {
   display: flex;
   align-items: center;
@@ -243,16 +234,6 @@ p {
   background-color: #d9d1cf;
   min-height: 100vh;
   max-height: 100vh;
-}
-
-.testBackground {
-  background: url("../images/CourtneyMeOliveGrace.jpg") no-repeat 40% 20% /
-    cover;
-  height: 1000px;
-}
-
-.contentSection {
-  min-height: 2000px;
 }
 
 .hamburgerButton {
