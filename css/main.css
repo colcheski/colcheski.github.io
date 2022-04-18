@@ -88,14 +88,14 @@ p {
 }
 
 #introductionTextDiv {
-  background: linear-gradient(
+  /* background: linear-gradient(
     135deg,
-    hsl(196, 76%, 31%, 0.35),
-    hsl(175, 52%, 31%, 0.55)
+    hsl(196, 76%, 31%, 0.1),
+    hsl(175, 52%, 31%, 0.1)
   );
+  box-shadow: 0 0 8px 8px hsl(175, 52%, 31%, 0.1) inset;
+  border-radius: 20%; */
   text-align: center;
-  box-shadow: 0 0 8px 8px rgba(152, 150, 135, 255) inset;
-  border-radius: 20%;
 }
 
 #introductionPart1 {
@@ -208,22 +208,64 @@ p {
   text-align: center;
 }
 
-.navigationPane-1 {
-  font-family: Playfair Display;
-  display: flex;
-  margin-top: auto;
-  text-align: center;
-  font-size: 25px;
-  color: white;
+@media screen and (min-width: 0px) {
+  .navigationPane-1 {
+    font-family: Playfair Display;
+    display: flex;
+    margin-top: auto;
+    text-align: center;
+    font-size: 13px;
+    color: white;
+  }
+
+  .navigationPane-2 {
+    font-family: Playfair Display;
+    display: flex;
+    margin-top: auto;
+    text-align: center;
+    font-size: 13px;
+    color: black;
+  }
 }
 
-.navigationPane-2 {
-  font-family: Playfair Display;
-  display: flex;
-  margin-top: auto;
-  text-align: center;
-  font-size: 25px;
-  color: black;
+@media screen and (min-width: 1027px) and (max-width: 1149px) {
+  .navigationPane-1 {
+    font-size: 15px;
+  }
+
+  .navigationPane-2 {
+    font-size: 15px;
+  }
+}
+
+@media screen and (min-width: 1150px) and (max-width: 1231px) {
+  .navigationPane-1 {
+    font-size: 18px;
+  }
+
+  .navigationPane-2 {
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 1232px) and (max-width: 1435px) {
+  .navigationPane-1 {
+    font-size: 20px;
+  }
+
+  .navigationPane-2 {
+    font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 1436px) {
+  .navigationPane-1 {
+    font-size: 25px;
+  }
+
+  .navigationPane-2 {
+    font-size: 25px;
+  }
 }
 
 .mobileNavigation {
