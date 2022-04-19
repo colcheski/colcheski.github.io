@@ -26,7 +26,7 @@ $(document).ready(function () {
 
     var scrollTop = $(window).scrollTop();
     if (window.innerWidth < 992) {
-      if (scrollTop < parallaxIntroBottom) {
+      if (scrollTop < parallaxIntroBottom - 10) {
         $(".hamburgerButton").fadeOut();
       } else {
         $(".hamburgerButton").fadeIn();
@@ -40,7 +40,7 @@ $(document).ready(function () {
   $(window).on("scroll", () => {
     var scrollTop = $(window).scrollTop();
     if (window.innerWidth < 992) {
-      if (scrollTop < parallaxIntroBottom) {
+      if (scrollTop < parallaxIntroBottom - 10) {
         $(".hamburgerButton").fadeOut();
       } else {
         $(".hamburgerButton").fadeIn();
