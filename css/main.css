@@ -75,16 +75,52 @@ p {
   min-height: 85vh;
   height: 85vh;
 }
+@media screen and (min-width: 0px) {
+  #introduction {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100%;
+    font-family: Playfair Display;
+    font-size: 50px;
+    color: white;
+  }
+}
 
-#introduction {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 100%;
-  font-family: Playfair Display;
-  font-size: 50px;
-  color: white;
+@media screen and (min-width: 1292px) {
+  #introduction {
+    margin-left: 900px;
+  }
+}
+
+@media screen and (min-width: 959px) and (max-width: 1291px) {
+  #introduction {
+    margin-left: 600px;
+  }
+}
+
+@media screen and (min-width: 790px) and (max-width: 958px) {
+  #introduction {
+    margin-left: 500px;
+  }
+}
+
+@media screen and (min-width: 616px) and (max-width: 789px) {
+  #introduction {
+    margin-left: 450px;
+  }
+}
+
+@media screen and (min-width: 526px) and (max-width: 615px) {
+  #introduction {
+    margin-left: 300px;
+  }
+}
+@media screen and (min-width: 0px) and (max-width: 525px) {
+  #introduction {
+    margin-left: 250px;
+  }
 }
 
 #introductionTextDiv {
@@ -193,7 +229,34 @@ p {
   flex-flow: column;
   padding: 50px;
   color: white;
-  background-color: #292929;
+  /* background-color: #292929; */
+  background-color: #25274d;
+  min-height: 100vh;
+  max-height: 100vh;
+}
+
+.testimonials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+  padding: 50px;
+  color: white;
+  /* background-color: #990011ff; */
+  background-color: #2e9cca;
+  min-height: 100vh;
+  max-height: 100vh;
+}
+
+.contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+  padding: 50px;
+  color: black;
+  /* background-color: #d9d1cf; */
+  background-color: #aaabb8;
   min-height: 100vh;
   max-height: 100vh;
 }
@@ -275,30 +338,6 @@ p {
   text-align: center;
   font-size: 25px;
   color: black;
-}
-
-.testimonials {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-flow: column;
-  padding: 50px;
-  color: white;
-  background-color: #990011ff;
-  min-height: 100vh;
-  max-height: 100vh;
-}
-
-.contact {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-flow: column;
-  padding: 50px;
-  color: black;
-  background-color: #d9d1cf;
-  min-height: 100vh;
-  max-height: 100vh;
 }
 
 .hamburgerButton {
