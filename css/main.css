@@ -355,7 +355,7 @@ p {
   border-radius: 50%;
   position: fixed;
   top: 6vh;
-  right: 3vw;
+  left: 3vw;
   z-index: 2000;
   box-shadow: 0 0.5rem 1.5rem gray;
   text-align: center;
