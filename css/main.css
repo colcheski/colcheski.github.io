@@ -236,7 +236,8 @@ p {
   padding: 50px;
   color: white;
   /* background-color: #292929; */
-  background-color: #25274d;
+  /* background-color: #25274d; */
+  background-color: #2b547e;
   min-height: 100vh;
   max-height: 100vh;
 }
