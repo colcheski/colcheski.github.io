@@ -1,32 +1,18 @@
 $(document).ready(function () {
-  /* Variables for Mobile Scroll (probably want to think about not using globals) */
-  let parallaxIntro = $("#parallaxIntro");
-  let parallaxIntroBottom =
-    parallaxIntro.position().top + parallaxIntro.outerHeight(true);
-
-  var scrollTop = $(window).scrollTop();
-  if (window.innerWidth < 992) {
-    if (scrollTop < parallaxIntroBottom) {
-      $(".hamburgerButton").fadeOut();
-    } else {
-      $(".hamburgerButton").fadeIn();
-    }
-  } else {
-    $(".hamburgerButton").fadeOut();
-  }
-
+  /* Remove # from url when clicking on navigation */
   $(window).on("hashchange", function (e) {
     window.history.pushState("", document.title, window.location.pathname);
   });
 
-  $(window).on("resize", function () {
-    parallaxIntro = $("#parallaxIntro");
-    parallaxIntroBottom =
-      parallaxIntro.position().top + parallaxIntro.outerHeight(true);
+  /* Variables for Mobile Scroll (probably want to think about not using globals) */
+  let intro = $("#intro");
+  let introBottom = intro.position().top + intro.outerHeight(true);
 
-    var scrollTop = $(window).scrollTop();
+  /* Hamburger button display method */
+  const hamburgerButtonDisplay = (elementBottom) => {
+    let scrollTop = $(window).scrollTop();
     if (window.innerWidth < 992) {
-      if (scrollTop < parallaxIntroBottom - 10) {
+      if (scrollTop < introBottom - 10) {
         $(".hamburgerButton").fadeOut();
       } else {
         $(".hamburgerButton").fadeIn();
@@ -34,27 +20,27 @@ $(document).ready(function () {
     } else {
       $(".hamburgerButton").fadeOut();
     }
+  };
+
+  /* Check to see if hamburger button should be shown on page resize */
+  $(window).on("resize", () => {
+    intro = $("#intro");
+    introBottom = intro.position().top + intro.outerHeight(true);
+
+    hamburgerButtonDisplay(introBottom);
   });
 
-  /* Probably want to make this more efficient */
+  /* Check to see if hamburger button should be shown on page scroll */
   $(window).on("scroll", () => {
-    var scrollTop = $(window).scrollTop();
-    if (window.innerWidth < 992) {
-      if (scrollTop < parallaxIntroBottom - 10) {
-        $(".hamburgerButton").fadeOut();
-      } else {
-        $(".hamburgerButton").fadeIn();
-      }
-    } else {
-      $(".hamburgerButton").fadeOut();
-    }
+    hamburgerButtonDisplay(introBottom);
   });
 
-  $("#myModal").on("hidden.bs.modal", function () {
+  /* Modal and modal navigation controls */
+  $("#myModal").on("hidden.bs.modal", () => {
     $("#navi-toggle").prop("checked", false);
   });
 
-  $("#myModal").on("shown.bs.modal", function () {
+  $("#myModal").on("shown.bs.modal", () => {
     $("#navi-toggle").prop("checked", true);
   });
 
@@ -70,6 +56,7 @@ $(document).ready(function () {
       );
     });
 
+  /* Fade Up Intersection Observer */
   const createFadeupObserver = () => {
     const observerOptions = {
       root: null,
@@ -94,4 +81,5 @@ $(document).ready(function () {
   };
 
   createFadeupObserver();
+  hamburgerButtonDisplay(introBottom);
 });
