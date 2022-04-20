@@ -74,6 +74,7 @@ p {
   background: url("../images/Me.jpg") no-repeat 40% 20% / cover;
   min-height: 85vh;
   height: 85vh;
+  overflow: hidden;
 }
 @media screen and (min-width: 0px) {
   #introduction {
@@ -117,9 +118,14 @@ p {
     margin-left: 300px;
   }
 }
-@media screen and (min-width: 0px) and (max-width: 525px) {
+@media screen and (min-width: 500px) and (max-width: 525px) {
   #introduction {
     margin-left: 250px;
+  }
+}
+@media screen and (min-width: 0px) and (max-width: 499px) {
+  #introduction {
+    margin-top: 100px;
   }
 }
 
